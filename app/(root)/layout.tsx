@@ -1,9 +1,12 @@
-import React from 'react'
 
-export default function Rootlayout() {
+export default function Rootlayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <div>
+    <main className="flex">
       
-    </div>
+    </main>
   )
 }
