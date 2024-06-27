@@ -3,7 +3,10 @@ import HeaderBox from "@/components/HeaderBox";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 
 const Home = async ({searchParams: {id, page}}: SearchParamProps) => {
-  const currentPage = Number(page)
+  const currentPage = Number(page as string) || 1;
+  const loggedIn= {firstName: 'Aman', lastName: 'VV'}
+
+
   return (
     <section className="home">
       <div className="home-content">
@@ -11,7 +14,7 @@ const Home = async ({searchParams: {id, page}}: SearchParamProps) => {
           <HeaderBox
             type="greeting"
             title="Welcome"
-            // user={loggedIn?.firstName || 'Guest'}
+            user={loggedIn?.firstName || 'Guest'}
             subtext="Access and manage your account and transactions efficiently."
           />
           {/* <TotalBalanceBox 
