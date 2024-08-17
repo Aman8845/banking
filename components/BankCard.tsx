@@ -65,4 +65,4 @@ const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) =>
   )
 }
 
-export default BankCard
+export default BankCard 
